@@ -29,7 +29,7 @@ let mapDispatchToProps = (dispatch) =>{
             dispatch(setCurrentPageAC(pageNumber))
         },
         setTotalUsersCount: (totalCount) =>{
-            dispatch(setTotalUsersCountAC(totalCount))
+            dispatch(setTotalUsersCountAC(totalCount/10))
         }
     }
 }
