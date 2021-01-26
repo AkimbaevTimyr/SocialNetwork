@@ -2,22 +2,35 @@
     max-width: 100px;
     max-height: 100px;
     border-radius: 55px;
+    margin: 0px 0px 0px 10px;
 }
 
 .item{
     padding: 5px 0px 10px 10px;
 }
 
+.buttons{
+    margin: 5px 0px 5px 10px;
+}
+
 .button{
-    margin: 0px 0px 10px 20px;
+    margin: 0px 0px 10px 30px;
 }
 
 .info{
     position: absolute;
-    margin: -110px 0px 0px 110px;
+    margin: -110px 0px 0px 120px;
 }
 
 
 .selectedPage{
     font-weight: bold;
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background: #4676D7;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 10px;
 }
+
