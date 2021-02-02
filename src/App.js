@@ -15,11 +15,12 @@ import Account from './components/Settings/Account/Account'
 import Main from './components/Settings/Main/Main'
 import Privacy from './components/Settings/Privacy/Privacy'
 import ProfileContainer from './components/Profile/ProfileContainer'
+import HeaderContainer from './components/Header/HeaderContainer';
 
 const App = (props) => {
     return (
             <div className='app-wrapper'>
-                <Header />
+                <HeaderContainer />
                 <Navbar />
                 <div className='app-wrapper-content'>
                         <Route path='/dialogs'
