@@ -1,6 +1,6 @@
 import { connect } from "react-redux"
 import News from "./News"
-import { sendNewsCreator, updateNewsBodyCreator } from './../../redux/news-reducer'
+import { sendNews, updateNewsBody} from './../../redux/news-reducer'
 
 
 
@@ -12,20 +12,20 @@ const mapStateToProps = (state) => {
     }
 }
 
-let mapDispatchToProps = (dispatch) =>{
-    return{
-            updateNewsBody: (body) =>{ 
-                dispatch(updateNewsBodyCreator(body))
-            },
-            sendNews: () =>{
-                dispatch(sendNewsCreator())
-            }
+// let mapDispatchToProps = (dispatch) =>{
+//     return{
+//             updateNewsBody: (body) =>{ 
+//                 dispatch(updateNewsBody(body))
+//             },
+//             sendNews: () =>{
+//                 dispatch(sendNews())
+//             }
 
-        }
+//         }
     
-}
+// }
 
-const NewsContainer = connect(mapStateToProps,mapDispatchToProps)(News)
+const NewsContainer = connect(mapStateToProps,{  updateNewsBody,  sendNews })(News)
 
 
 export default NewsContainer

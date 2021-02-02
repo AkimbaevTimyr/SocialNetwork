@@ -1,23 +1,16 @@
-import React from 'react';
+import React from 'react'
+import ProfileInfo from './ProfileInfo/ProfileInfo'
 import MyPostsContainer from './MyPosts/MyPostsContainer'
-import ProfileInfo from "./ProfileInfo/ProfileInfo";
-import PreLoader from '../common/Preloader/Preloader'
 
-class Profile extends React.Component{
-    render(){
-        {this.props.setIsFetching(true)}
-        return<> {this.props.isFetching ? <PreLoader /> : null}
-                <ProfileInfo />
-                <MyPostsContainer  />
-                {this.props.setIsFetching(false)}
-            </>
-            
-    }
+
+const Profile = (props) =>{
+    return(
+        <div>
+            <ProfileInfo profile={props.profile}/>
+            <MyPostsContainer />
+        </div>
+    )
 }
 
 
-
-export default Profile;
-
-
-//store={props.store}
+export default Profile

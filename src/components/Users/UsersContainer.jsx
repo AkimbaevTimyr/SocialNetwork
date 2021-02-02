@@ -3,7 +3,6 @@ import { connect} from 'react-redux'
 import { followAC, setUsersAC, unfollowAC , setCurrentPageAC, setTotalUsersCountAC, setIsFetchingAC} from '../../redux/users-reducer'
 import Users from './Users'
 import *as axios from 'axios'
-import styles from './users.module.css'
 import PreLoader from '../common/Preloader/Preloader'
 
 // две контейнерные компоненты находятся в одной компоненте

@@ -1,12 +1,16 @@
 import { sendMessageCreator } from '../../redux/dialogs-reducer'
 import s from './News.module.css'
 import NewsItem from './NewsItem/NewsItem'
-import React from 'react'
+import React, {useEffect} from 'react'
 
 
 const News = (props) =>{
 
-    let newsElements = props.messages.map( n => <NewsItem messages={n.messages} />)
+    useEffect(()=>{
+        document.title = 'News'
+    })
+
+    let newsElements = props.messages.map( n => <NewsItem messages={n.messages} time={n.time} />)
    
     let onSendMessageClick = () =>{
         props.sendNews()
@@ -23,10 +27,10 @@ const News = (props) =>{
             </div>
             <div className={s.item}>
                 <div>
-                    <textarea onChange = { onNewMessageChange }/>
+                    <textarea placeholder='Enter your news' onChange = { onNewMessageChange }/>
                 </div>
                 <div>
-                    <button onClick = { onSendMessageClick }>Send</button>
+                    <button type="button" class="btn btn-primary"  onClick = { onSendMessageClick }>Send</button>
                 </div>
             </div>
         </div>
